@@ -92,7 +92,7 @@ module "cucumber_testsuite" {
   cc_username = var.SCC_USER
   cc_password = var.SCC_PASSWORD
 
-  images = ["centos7o", "opensuse150o", "sles15sp1", "sles15sp1o", "sles15sp2o", "ubuntu1804o"]
+  images = ["centos7o", "opensuse150o", "sles15sp1", "sles15sp2o", "ubuntu1804o"]
 
   use_avahi    = false
   name_prefix  = "suma-40-"
@@ -113,11 +113,13 @@ module "cucumber_testsuite" {
       }
     }
     server = {
+      image = "sles15sp1"
       provider_settings = {
         mac = "AA:B2:93:00:00:40"
       }
     }
     proxy = {
+      image = "sles15sp1"
       provider_settings = {
         mac = "AA:B2:93:00:00:46"
       }
@@ -163,7 +165,7 @@ module "cucumber_testsuite" {
       image = "sles15sp2o"
     }
     kvm-host = {
-      image = "sles15sp1o"
+      image = "sles15sp1"
       provider_settings = {
         mac = "AA:B2:93:00:00:48"
       }
