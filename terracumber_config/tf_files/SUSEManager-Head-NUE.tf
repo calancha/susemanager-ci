@@ -123,7 +123,7 @@ module "cucumber_testsuite" {
       }
     }
     suse-client = {
-      image = "sles15sp1"
+      image = "sles15sp1o"
       name = "cli-sles15"
       provider_settings = {
         mac = "AA:B2:93:00:00:21"
